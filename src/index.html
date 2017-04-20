@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<base href="/">
+<meta charset="utf-8">
+<title>NYSE-FRONTEND</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+
+
+<!-- build:css({.tmp,src}) styles/vendor.css -->
+<link rel="stylesheet"
+	href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+<!-- bower:css -->
+<!-- run `gulp inject` to automatically populate bower styles dependencies -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:css({.tmp,src}) styles/app.css -->
+<!-- inject:css -->
+<!-- css files will be automatically insert here -->
+<!-- endinject -->
+<!-- endbuild -->
+</head>
+
+
+<body ng-app="app">
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+				<nav class="nav-sidebar">
+					<ul class="nav tabs">
+						<li class=""><a href="/search">Search Stock</a></li>
+						<li class=""><a ui-sref="portfolio.add">Add Symbol to
+								Portfolio</a></li>
+						<li class=""><a ui-sref="portfolio.view">View/Edit
+								Portfolio</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-md-8">
+				<ui-view></ui-view>
+			</div>
+		</div>
+	</div>
+
+
+
+
+</body>
+
+<!-- build:js({.tmp,src}) scripts/vendor.js -->
+<!-- bower:js -->
+<!-- run `gulp inject` to automatically populate bower script dependencies -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,src}) scripts/app.js -->
+<!-- inject:js -->
+<!-- js files will be automatically insert here -->
+<!-- endinject -->
+<!-- inject:partials -->
+<!-- angular templates will be automatically converted in js and inserted here -->
+<!-- endinject -->
+<!-- endbuild -->
+</html>
+

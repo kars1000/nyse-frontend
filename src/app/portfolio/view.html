@@ -1,0 +1,44 @@
+
+
+<div ng-init="vm.list()">
+	<table class="table">
+
+		<thead>
+
+			<tr>
+
+				<th>Company Name</th>
+				<th>Symbol</th>
+				<th>Last Trade Price</th>
+				<th>Shares Owned</th>
+				<th>Market Value of</th>
+				<th>Action</th>
+
+			</tr>
+
+		</thead>
+
+		<tbody>
+
+			<tr ng-repeat="profile in vm.data">
+
+				<td>{{profile.companyName}}</td>
+
+				<td>{{profile.symbol}}</td>
+				<td>{{profile.lastPrice}}</td>
+
+				<td>{{profile.numberOfSharesOwned}}</td>
+				<td>{{profile.marketValue}}</td>
+				<td><button ng-click="vm.remove(profile.id)" class="btn btn-primary">Remove From Portfolio</button></td>
+
+
+
+			</tr>
+
+
+
+		</tbody>
+
+	</table>
+
+</div>
